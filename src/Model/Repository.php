@@ -40,6 +40,8 @@ class Repository
     }
 
     /**
+     * Return the path url
+     *
      * @return string
      */
     public function getPath()
@@ -48,6 +50,8 @@ class Repository
     }
 
     /**
+     * Return the path type
+     *
      * @return string
      */
     public function getType()
