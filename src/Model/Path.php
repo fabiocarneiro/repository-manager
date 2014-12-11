@@ -2,6 +2,8 @@
 
 namespace ZFBrasil\RepositoryManager\Model;
 
+use Assert\Assertion;
+
 /**
  * @author  Fábio Carneiro <fahecs@gmail.com>
  * @license MIT
@@ -15,6 +17,7 @@ class Path
      */
     public function __construct($url)
     {
+        Assertion::url($url);
         $this->url = $url;
     }
 
