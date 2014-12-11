@@ -6,7 +6,7 @@ use Zend\ModuleManager\Feature\ConfigProviderInterface;
 
 /**
  * @author  Fábio Carneiro <fahecs@gmail.com>
- * @license proprietary
+ * @license MIT
  */
 class Module implements ConfigProviderInterface
 {
