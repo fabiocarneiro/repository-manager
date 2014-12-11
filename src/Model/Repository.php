@@ -38,4 +38,20 @@ class Repository
     {
         return new self(new Type($method), new Path($arguments[0]));
     }
+
+    /**
+     * @return string
+     */
+    public function getPath()
+    {
+        return $this->path->getUrl();
+    }
+
+    /**
+     * @return string
+     */
+    public function getType()
+    {
+        return $this->type->getName();
+    }
 }
