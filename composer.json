@@ -12,5 +12,10 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {}
+    "require": {},
+    "autoload": {
+        "psr-0": {
+            "ZFBrasil\\RepositoryManager\\": "src"
+        }
+    }
 }
