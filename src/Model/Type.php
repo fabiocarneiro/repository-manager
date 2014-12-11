@@ -12,12 +12,14 @@ class Type implements TypeInterface
 {
     /**
      * Hold the type name
+     *
      * @var string
      */
     private $name;
 
     /**
      * Hold the available types for a repository
+     *
      * @var array
      */
     private static $types;
@@ -33,5 +35,13 @@ class Type implements TypeInterface
         }
 
         $this->name = $name;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getName()
+    {
+        return $this->name;
     }
 }

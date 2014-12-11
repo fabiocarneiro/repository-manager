@@ -8,5 +8,10 @@ namespace ZFBrasil\RepositoryManager\Model;
  */
 interface TypeInterface
 {
-
-} 
+    /**
+     * Returns the type name
+     *
+     * @return string
+     */
+    public function getName();
+}
