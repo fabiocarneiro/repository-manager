@@ -20,4 +20,3 @@ class PathTest extends TestCase
         $this->assertSame('http://example.com', $path->getUrl());
     }
 }
- 
