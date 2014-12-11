@@ -22,14 +22,12 @@ class Type implements TypeInterface
      *
      * @var array
      */
-    private static $types;
+    private static $types = [
+        'VCS' => 'Version control systems'
+    ];
 
     public function __construct($name)
     {
-        if (!isset(static::$types)) {
-            static::$types = require __DIR__ . '/../../config/types.config.php';
-        }
-
         if (!array_key_exists($name, static::$types)) {
             throw new Exception;
         }
