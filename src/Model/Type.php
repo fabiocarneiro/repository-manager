@@ -8,7 +8,7 @@ use Exception;
  * @author  Fábio Carneiro <fahecs@gmail.com>
  * @license MIT
  */
-class Type implements TypeInterface
+class Type
 {
     /**
      * Hold the type name
@@ -36,7 +36,9 @@ class Type implements TypeInterface
     }
 
     /**
-     * {@inheritDoc}
+     * Returns the type name
+     *
+     * @return string
      */
     public function getName()
     {

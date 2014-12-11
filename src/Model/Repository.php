@@ -6,23 +6,23 @@ namespace ZFBrasil\RepositoryManager\Model;
  * @author  Fábio Carneiro <fahecs@gmail.com>
  * @license MIT
  */
-class Repository implements RepositoryInterface
+class Repository
 {
     /**
-     * @var TypeInterface
+     * @var Type
      */
     private $type;
 
     /**
-     * @var PathInterface
+     * @var Path
      */
     private $path;
 
     /**
-     * @param TypeInterface $type
-     * @param PathInterface $path
+     * @param Type $type
+     * @param Path $path
      */
-    private function __construct(TypeInterface $type, PathInterface $path)
+    private function __construct(Type $type, Path $path)
     {
         $this->type = $type;
         $this->path = $path;

@@ -19,7 +19,7 @@ class RepositoryTest extends TestCase
     public function testValidTypeReturnRepositoryInstance()
     {
         $this->assertInstanceOf(
-            RepositoryInterface::class,
+            Repository::class,
             Repository::VCS('http://github.com')
         );
     }
