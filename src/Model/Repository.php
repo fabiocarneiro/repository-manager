@@ -5,6 +5,7 @@ namespace ZFBrasil\RepositoryManager\Model;
 /**
  * @author  Fábio Carneiro <fahecs@gmail.com>
  * @license MIT
+ * @method static Type VCS(string $method)
  */
 class Repository
 {
