@@ -1,0 +1,37 @@
+<?php
+
+namespace ZFBrasil\Proxposer\Model;
+
+use Exception;
+
+/**
+ * @author  Fábio Carneiro <fahecs@gmail.com>
+ * @license MIT
+ */
+class Type
+{
+    /**
+     * Hold the type name
+     * @var string
+     */
+    private $name;
+
+    /**
+     * Hold the available types for a repository
+     * @var array
+     */
+    private static $types;
+
+    public function __construct($name)
+    {
+        if (!isset(static::$types)) {
+            static::$types = require __DIR__ . '/../../config/types.config.php';
+        }
+
+        if (!array_key_exists($name, static::$types)) {
+            throw new Exception;
+        }
+
+        $this->name = $name;
+    }
+}

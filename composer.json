@@ -1,0 +1,16 @@
+{
+    "name": "zfbrasil/repository-manager",
+    "description": "manages repositories",
+    "require-dev": {
+        "phpunit/phpunit": "~4.6@dev"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "fabiocarneiro",
+            "email": "fahecs@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
