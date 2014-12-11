@@ -18,10 +18,11 @@ class RepositoryTest extends TestCase
      */
     public function testValidTypeReturnRepositoryInstance()
     {
-        $this->assertInstanceOf(
-            Repository::class,
-            Repository::VCS('http://github.com')
-        );
+        $repository = Repository::VCS('http://example.com');
+        
+        $this->assertInstanceOf(Repository::class, $repository);
+        $this->assertSame('VCS', $repository->getType());
+        $this->assertSame('http://example.com', $repository->getPath());
     }
 
     /**
@@ -30,6 +31,6 @@ class RepositoryTest extends TestCase
     public function testCreateInvalidRepositoryThrowsException()
     {
         $this->setExpectedException(Exception::class);
-        Repository::INVALID('http://github.com');
+        Repository::INVALID('http://example.com');
     }
 }
