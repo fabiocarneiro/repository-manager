@@ -26,6 +26,6 @@ class Repository implements RepositoryInterface
 
     public static function __callStatic($method, $arguments)
     {
-        return new self(new Type($method), $arguments[0]);
+        return new self(new Type($method), new Path($arguments[0]));
     }
 }

@@ -6,7 +6,7 @@ namespace ZFBrasil\RepositoryManager\Model;
  * @author  Fábio Carneiro <fahecs@gmail.com>
  * @license MIT
  */
-class Path
+class Path implements PathInterface
 {
     private $url;
 }

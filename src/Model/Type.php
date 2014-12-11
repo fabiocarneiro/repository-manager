@@ -8,7 +8,7 @@ use Exception;
  * @author  Fábio Carneiro <fahecs@gmail.com>
  * @license MIT
  */
-class Type
+class Type implements TypeInterface
 {
     /**
      * Hold the type name

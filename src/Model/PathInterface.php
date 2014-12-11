@@ -2,12 +2,11 @@
 
 namespace ZFBrasil\RepositoryManager\Model;
 
-
 /**
- * @author Fábio Carneiro <fahecs@gmail.com>
- * @license proprietary
+ * @author  Fábio Carneiro <fahecs@gmail.com>
+ * @license MIT
  */
- class PathInterface
+interface PathInterface
 {
 
 } 
