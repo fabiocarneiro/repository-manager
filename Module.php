@@ -1,6 +1,6 @@
 <?php
 
-namespace ZFBrasil\Proxposer;
+namespace ZFBrasil\RepositoryManager;
 
 use Zend\ModuleManager\Feature\ConfigProviderInterface;
 

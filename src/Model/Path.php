@@ -1,6 +1,6 @@
 <?php
 
-namespace ZFBrasil\Proxposer\Model;
+namespace ZFBrasil\RepositoryManager\Model;
 
 /**
  * @author  Fábio Carneiro <fahecs@gmail.com>

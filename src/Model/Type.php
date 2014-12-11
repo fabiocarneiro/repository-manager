@@ -1,6 +1,6 @@
 <?php
 
-namespace ZFBrasil\Proxposer\Model;
+namespace ZFBrasil\RepositoryManager\Model;
 
 use Exception;
 
