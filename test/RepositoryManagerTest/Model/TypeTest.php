@@ -7,7 +7,7 @@ use ZFBrasil\RepositoryManager\Model\Type;
 
 /**
  * @author  Fábio Carneiro <fahecs@gmail.com>
- * @license proprietary
+ * @license MIT
  */
 class TypeTest extends TestCase
 {
