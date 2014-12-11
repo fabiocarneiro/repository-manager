@@ -17,4 +17,3 @@ class RepositoryTest extends TestCase
         $this->assertInstanceOf(RepositoryInterface::class, Repository::VCS('http://github.com'));
     }
 }
- 

@@ -7,4 +7,3 @@
 return [
     'VCS' => 'Version control systems'
 ];
-  

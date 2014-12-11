@@ -9,4 +9,4 @@ namespace ZFBrasil\RepositoryManager\Model;
 class Path
 {
     private $url;
-} 
+}

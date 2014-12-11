@@ -8,4 +8,4 @@ namespace ZFBrasil\RepositoryManager\Model;
  */
 interface RepositoryInterface
 {
-} 
+}
