@@ -42,7 +42,9 @@ class RepositoryManager implements RepositoryManagerInterface
     }
 
     /**
-     * @param integer $id
+     * @param int $id
+     *
+     * @return Repository
      */
     public function getRepository($id)
     {

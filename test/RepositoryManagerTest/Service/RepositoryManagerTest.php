@@ -36,4 +36,3 @@ class RepositoryManagerTest extends TestCase
         );
     }
 }
- 
