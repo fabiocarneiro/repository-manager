@@ -9,7 +9,7 @@ use Doctrine\Common\Persistence\ObjectManager;
 
 /**
  * @author  Fábio Carneiro <fahecs@gmail.com>
- * @license proprietary
+ * @license MIT
  */
 class RepositoryManagerTest extends TestCase
 {

@@ -6,7 +6,7 @@ use ZFBrasil\RepositoryManager\Model\Repository;
 
 /**
  * @author  Fábio Carneiro <fahecs@gmail.com>
- * @license proprietary
+ * @license MIT
  */
 interface RepositoryManagerInterface
 {

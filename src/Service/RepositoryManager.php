@@ -8,7 +8,7 @@ use Doctrine\Common\Persistence\ObjectRepository;
 
 /**
  * @author  Fábio Carneiro <fahecs@gmail.com>
- * @license proprietary
+ * @license MIT
  */
 class RepositoryManager implements RepositoryManagerInterface
 {
