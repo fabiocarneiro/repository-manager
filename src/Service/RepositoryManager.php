@@ -42,6 +42,8 @@ class RepositoryManager implements RepositoryManagerInterface
     }
 
     /**
+     * Gets the repository for a given id
+     *
      * @param int $id
      *
      * @return Repository
