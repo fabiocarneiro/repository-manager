@@ -15,7 +15,7 @@ interface RepositoryManagerInterface
      *
      * @param Repository $repository
      *
-     * @return boolean
+     * @return int
      */
     public function addRepository(Repository $repository);
 }
