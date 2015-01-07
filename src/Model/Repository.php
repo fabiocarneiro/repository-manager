@@ -2,61 +2,42 @@
 
 namespace ZFBrasil\RepositoryManager\Model;
 
+use ZFBrasil\RepositoryManager\VO\Repository as RepositoryVO;
+
 /**
  * @author  Fábio Carneiro <fahecs@gmail.com>
  * @license MIT
- * @method static Type VCS(string $method)
  */
 class Repository
 {
     /**
-     * @var Type
+     * @var int
      */
-    private $type;
+    private $id;
 
     /**
-     * @var Path
+     * @var RepositoryVO
      */
-    private $path;
+    private $repository;
 
-    /**
-     * @param Type $type
-     * @param Path $path
-     */
-    private function __construct(Type $type, Path $path)
+    public function __construct(RepositoryVO $repository)
     {
-        $this->type = $type;
-        $this->path = $path;
+        $this->repository = $repository;
     }
 
     /**
-     * @param string $method
-     * @param string $arguments
-     *
-     * @return Repository
+     * @return int
      */
-    public static function __callStatic($method, $arguments)
+    public function getId()
     {
-        return new self(new Type($method), new Path($arguments[0]));
+        return $this->id;
     }
 
     /**
-     * Return the path url
-     *
-     * @return string
+     * @return RepositoryVO
      */
-    public function getPath()
+    public function getRepository()
     {
-        return $this->path->getUrl();
-    }
-
-    /**
-     * Return the path type
-     *
-     * @return string
-     */
-    public function getType()
-    {
-        return $this->type->getName();
+        return $this->repository;
     }
 }

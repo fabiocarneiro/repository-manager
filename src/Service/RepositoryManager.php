@@ -3,8 +3,9 @@
 namespace ZFBrasil\RepositoryManager\Service;
 
 use Doctrine\Common\Persistence\ObjectManager;
-use ZFBrasil\RepositoryManager\Model\Repository;
 use Doctrine\Common\Persistence\ObjectRepository;
+use ZFBrasil\RepositoryManager\Model\Repository;
+use ZFBrasil\RepositoryManager\VO\Repository as RepositoryVO;
 
 /**
  * @author  Fábio Carneiro <fahecs@gmail.com>
@@ -33,12 +34,13 @@ class RepositoryManager implements RepositoryManagerInterface
     /**
      * {@inheritDoc}
      */
-    public function addRepository(Repository $repository)
+    public function addRepository(RepositoryVO $repositoryVO)
     {
+        $repository = new Repository($repositoryVO);
         $this->objectManager->persist($repository);
         $this->objectManager->flush();
 
-        return $repository->getId();
+        return $repository;
     }
 
     /**

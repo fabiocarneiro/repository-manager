@@ -28,11 +28,12 @@ class RepositoryManagerTest extends TestCase
 
     public function testCanAddRepository()
     {
-        $repository = Repository::VCS('http://example.com');
-        $id         = $this->repositoryManager->addRepository($repository);
+        $repository = $this->repositoryManager->addRepository(
+            Repository::VCS('http://example.com')
+        );
 
         $this->assertInstanceOf(Repository::class,
-            $this->repositoryManager->getRepository($id)
+            $this->repositoryManager->getRepository($repository->getId())
         );
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace ZFBrasil\RepositoryManager\Model;
+namespace ZFBrasil\RepositoryManager\VO;
 
 use Assert\Assertion;
 
