@@ -3,7 +3,7 @@
 namespace ZFBrasil\RepositoryManagerTest\Model;
 
 use PHPUnit_Framework_TestCase as TestCase;
-use ZFBrasil\RepositoryManager\VO\Path;
+use ZFBrasil\RepositoryManager\Model\Path;
 
 /**
  * @author  Fábio Carneiro <fahecs@gmail.com>

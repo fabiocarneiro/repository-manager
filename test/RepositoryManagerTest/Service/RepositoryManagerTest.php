@@ -2,6 +2,7 @@
 
 namespace ZFBrasil\RepositoryManagerTest\Service;
 
+use Doctrine\Common\Persistence\ObjectRepository;
 use PHPUnit_Framework_TestCase as TestCase;
 use ZFBrasil\RepositoryManager\Model\Repository;
 use ZFBrasil\RepositoryManager\Service\RepositoryManager;
@@ -22,7 +23,7 @@ class RepositoryManagerTest extends TestCase
     {
         $this->repositoryManager = new RepositoryManager(
             $this->getMock(ObjectManager::class),
-            $this->getMock(RepositoryManager::class)
+            $this->getMock(ObjectRepository::class)
         );
     }
 

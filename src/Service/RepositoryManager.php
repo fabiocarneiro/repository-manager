@@ -5,6 +5,7 @@ namespace ZFBrasil\RepositoryManager\Service;
 use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\Common\Persistence\ObjectRepository;
 use ZFBrasil\RepositoryManager\Model\Repository;
+use ZFBrasil\RepositoryManager\Model\SelectableRepository;
 use ZFBrasil\RepositoryManager\VO\Repository as RepositoryVO;
 
 /**
@@ -34,13 +35,15 @@ class RepositoryManager implements RepositoryManagerInterface
     /**
      * {@inheritDoc}
      */
-    public function addRepository(RepositoryVO $repositoryVO)
+    public function addRepository(Repository $repository)
     {
-        $repository = new Repository($repositoryVO);
-        $this->objectManager->persist($repository);
+        $selectableRepository = SelectableRepository::{$repository->getType()}(
+            $repository->getPath()
+        );
+        $this->objectManager->persist($selectableRepository);
         $this->objectManager->flush();
 
-        return $repository;
+        return $selectableRepository;
     }
 
     /**
