@@ -39,7 +39,7 @@ class RepositoryPath extends StringType
             throw ConversionException::conversionFailedFormat(
                 $value,
                 $this->getName(),
-                'string'
+                'valid path'
             );
         }
 
