@@ -97,4 +97,3 @@ class RepositoryTypeTest extends TestCase
         );
     }
 }
- 
