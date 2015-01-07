@@ -13,3 +13,4 @@ before_script:
 script:
   - ./vendor/bin/phpunit --log-junit build/testresults/junit.xml --coverage-xml build/codecoverage test
   - ./vendor/bin/phpcs --standard=PSR2 ./src
+  
