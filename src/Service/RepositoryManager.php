@@ -40,6 +40,7 @@ class RepositoryManager implements RepositoryManagerInterface
         $selectableRepository = SelectableRepository::{$repository->getType()}(
             $repository->getPath()
         );
+
         $this->objectManager->persist($selectableRepository);
         $this->objectManager->flush();
 
