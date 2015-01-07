@@ -33,7 +33,8 @@ class RepositoryManagerTest extends TestCase
             Repository::VCS('http://example.com')
         );
 
-        $this->assertInstanceOf(Repository::class,
+        $this->assertInstanceOf(
+            Repository::class,
             $this->repositoryManager->getRepository($repository->getId())
         );
     }
