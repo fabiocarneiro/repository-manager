@@ -32,8 +32,25 @@ class RepositoryManagerTest extends TestCase
             $this->getMock(ObjectRepository::class)
         );
 
-        $repository = $repositoryManager->addRepository(
+        $repositoryManager->addRepository(
             Repository::VCS('http://example.com')
         );
+    }
+
+    public function testCanRetrieveRepository()
+    {
+        $objectRepository = $this->getMock(ObjectRepository::class);
+
+        $objectRepository
+            ->expects($this->once())
+            ->method('find')
+            ->with($this->isType('integer'));
+        
+        $repositoryManager = new RepositoryManager(
+            $this->getMock(ObjectManager::class),
+            $objectRepository
+        );
+
+        $repositoryManager->getRepository(0);
     }
 }
