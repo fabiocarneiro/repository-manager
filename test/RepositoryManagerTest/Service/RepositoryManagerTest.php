@@ -14,28 +14,26 @@ use Doctrine\Common\Persistence\ObjectManager;
  */
 class RepositoryManagerTest extends TestCase
 {
-    /**
-     * @var RepositoryManagerInterface
-     */
-    protected $repositoryManager;
-
-    public function setUp()
-    {
-        $this->repositoryManager = new RepositoryManager(
-            $this->getMock(ObjectManager::class),
-            $this->getMock(ObjectRepository::class)
-        );
-    }
-
     public function testCanAddRepository()
     {
-        $repository = $this->repositoryManager->addRepository(
-            Repository::VCS('http://example.com')
+        $objectManager = $this->getMock(ObjectManager::class);
+
+        $objectManager
+            ->expects($this->once())
+            ->method('persist')
+            ->with($this->isInstanceOf(Repository::class));
+
+        $objectManager
+            ->expects($this->once())
+            ->method('flush');
+
+        $repositoryManager = new RepositoryManager(
+            $objectManager,
+            $this->getMock(ObjectRepository::class)
         );
 
-        $this->assertInstanceOf(
-            Repository::class,
-            $this->repositoryManager->getRepository($repository->getId())
+        $repository = $repositoryManager->addRepository(
+            Repository::VCS('http://example.com')
         );
     }
 }
