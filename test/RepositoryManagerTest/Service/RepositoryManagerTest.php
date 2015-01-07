@@ -45,7 +45,7 @@ class RepositoryManagerTest extends TestCase
             ->expects($this->once())
             ->method('find')
             ->with($this->isType('integer'));
-        
+
         $repositoryManager = new RepositoryManager(
             $this->getMock(ObjectManager::class),
             $objectRepository
