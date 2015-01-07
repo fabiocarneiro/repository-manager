@@ -11,11 +11,21 @@ class RepositoryPath extends StringType
 {
     const NAME = 'repository_path';
 
+    /**
+     * @return string
+     */
     public function getName()
     {
         return self::NAME;
     }
 
+    /**
+     * @param mixed            $value
+     * @param AbstractPlatform $platform
+     *
+     * @return mixed|Path
+     * @throws ConversionException
+     */
     public function convertToPHPValue($value, AbstractPlatform $platform)
     {
         if ($value === null || $value instanceof Path) {
