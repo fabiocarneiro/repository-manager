@@ -26,6 +26,11 @@ class Type
         'VCS' => 'Version control systems'
     ];
 
+    /**
+     * @param $name
+     *
+     * @throws Exception
+     */
     public function __construct($name)
     {
         if (!array_key_exists($name, static::$types)) {
