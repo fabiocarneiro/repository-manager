@@ -21,10 +21,10 @@ class RepositoryPath extends StringType
     }
 
     /**
-     * @param mixed            $value
+     * @param null|string|Path $value
      * @param AbstractPlatform $platform
      *
-     * @return mixed|Path
+     * @return null|Path
      * @throws ConversionException
      */
     public function convertToPHPValue($value, AbstractPlatform $platform)
