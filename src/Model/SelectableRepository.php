@@ -22,15 +22,4 @@ class SelectableRepository extends Repository
     {
         return $this->id;
     }
-
-    /**
-     * @param string $method
-     * @param string $arguments
-     *
-     * @return SelectableRepository
-     */
-    public static function __callStatic($method, $arguments)
-    {
-        return new self(new Type($method), new Path($arguments[0]));
-    }
 }

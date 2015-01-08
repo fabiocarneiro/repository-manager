@@ -37,7 +37,7 @@ class Repository
      */
     public static function __callStatic($method, $arguments)
     {
-        return new self(new Type($method), new Path($arguments[0]));
+        return new static(new Type($method), new Path($arguments[0]));
     }
 
     /**
