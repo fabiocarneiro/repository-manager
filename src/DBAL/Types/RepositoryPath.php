@@ -2,6 +2,7 @@
 
 namespace ZFBrasil\RepositoryManager\DBAL\Types;
 
+use Exception;
 use Doctrine\DBAL\Types\StringType;
 use Doctrine\DBAL\Types\ConversionException;
 use Doctrine\DBAL\Platforms\AbstractPlatform;
@@ -20,10 +21,10 @@ class RepositoryPath extends StringType
     }
 
     /**
-     * @param mixed            $value
+     * @param null|string|Path $value
      * @param AbstractPlatform $platform
      *
-     * @return mixed|Path
+     * @return null|Path
      * @throws ConversionException
      */
     public function convertToPHPValue($value, AbstractPlatform $platform)
@@ -32,13 +33,13 @@ class RepositoryPath extends StringType
             return $value;
         }
 
-        $val = new Path($value);
-
-        if (!$val) {
+        try {
+            $val = new Path($value);
+        } catch (Exception $e) {
             throw ConversionException::conversionFailedFormat(
                 $value,
                 $this->getName(),
-                'string'
+                'valid path'
             );
         }
 
