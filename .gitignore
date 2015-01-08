@@ -6,3 +6,6 @@ composer.lock
 # Ide files
 nbproject/
 .idea/
+
+# Project files
+build/
