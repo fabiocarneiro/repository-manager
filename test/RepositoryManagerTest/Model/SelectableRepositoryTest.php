@@ -24,6 +24,9 @@ class SelectableRepositoryTest extends TestCase
         $this->assertSame('http://example.com', $repository->getPath());
     }
 
+    /**
+     * @test
+     */
     public function testCanRetrieveNullIdentifierBeforePersist()
     {
         $repository = SelectableRepository::VCS('http://example.com');
