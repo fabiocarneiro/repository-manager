@@ -3,6 +3,7 @@
 namespace ZFBrasil\RepositoryManager\Service;
 
 use ZFBrasil\RepositoryManager\Model\Repository;
+use ZFBrasil\RepositoryManager\Model\SelectableRepository;
 
 /**
  * @author  Fábio Carneiro <fahecs@gmail.com>
@@ -15,7 +16,7 @@ interface RepositoryManagerInterface
      *
      * @param Repository $repository
      *
-     * @return int
+     * @return SelectableRepository
      */
     public function addRepository(Repository $repository);
 
@@ -24,7 +25,7 @@ interface RepositoryManagerInterface
      *
      * @param int $id
      *
-     * @return Repository
+     * @return SelectableRepository
      */
     public function getRepository($id);
 }
