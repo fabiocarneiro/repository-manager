@@ -4,7 +4,6 @@ namespace ZFBrasil\RepositoryManagerTest\Model;
 
 use PHPUnit_Framework_TestCase as TestCase;
 use ZFBrasil\RepositoryManager\Model\Repository;
-use ZFBrasil\RepositoryManager\Model\RepositoryInterface;
 use Exception;
 
 /**

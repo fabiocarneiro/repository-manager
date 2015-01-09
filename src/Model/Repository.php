@@ -12,18 +12,18 @@ class Repository
     /**
      * @var Type
      */
-    private $type;
+    protected $type;
 
     /**
      * @var Path
      */
-    private $path;
+    protected $path;
 
     /**
      * @param Type $type
      * @param Path $path
      */
-    private function __construct(Type $type, Path $path)
+    public function __construct(Type $type, Path $path)
     {
         $this->type = $type;
         $this->path = $path;
@@ -37,7 +37,7 @@ class Repository
      */
     public static function __callStatic($method, $arguments)
     {
-        return new self(new Type($method), new Path($arguments[0]));
+        return new static(new Type($method), new Path($arguments[0]));
     }
 
     /**
