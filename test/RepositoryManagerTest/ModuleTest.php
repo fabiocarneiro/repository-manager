@@ -35,4 +35,3 @@ class ModuleTest extends TestCase
         );
     }
 }
- 

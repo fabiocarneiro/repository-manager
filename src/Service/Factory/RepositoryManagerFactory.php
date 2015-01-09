@@ -16,7 +16,7 @@ class RepositoryManagerFactory implements FactoryInterface
 {
     /**
      * {@inheritDoc}
-     * @return mixed
+     * @return RepositoryManager
      */
     public function createService(ServiceLocatorInterface $serviceLocator)
     {
