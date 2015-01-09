@@ -40,9 +40,10 @@ class RepositoryManager implements RepositoryManagerInterface
      */
     public function addRepository(Repository $repository)
     {
-        $selectableRepository = SelectableRepository::{$repository->getType()}(
-            $repository->getPath()
-        );
+        $type = $repository->getType();
+        $path = $repository->getPath();
+
+        $selectableRepository = SelectableRepository::$type($path);
 
         $this->objectManager->persist($selectableRepository);
         $this->objectManager->flush();
