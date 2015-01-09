@@ -23,7 +23,7 @@ class Repository
      * @param Type $type
      * @param Path $path
      */
-    private function __construct(Type $type, Path $path)
+    public function __construct(Type $type, Path $path)
     {
         $this->type = $type;
         $this->path = $path;
