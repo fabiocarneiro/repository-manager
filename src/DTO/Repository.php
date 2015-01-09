@@ -5,17 +5,17 @@ namespace ZFBrasil\RepositoryManager\DTO;
 class Repository
 {
     /**
-     * @var string
+     * @var null|string
      */
     private $type;
 
     /**
-     * @var string
+     * @var null|string
      */
     private $path;
 
     /**
-     * @return string
+     * @return null|string
      */
     public function getPath()
     {
@@ -23,7 +23,7 @@ class Repository
     }
 
     /**
-     * @param string $path
+     * @param null|string $path
      */
     public function setPath($path)
     {
@@ -31,7 +31,7 @@ class Repository
     }
 
     /**
-     * @return string
+     * @return null|string
      */
     public function getType()
     {
@@ -39,7 +39,7 @@ class Repository
     }
 
     /**
-     * @param string $type
+     * @param null|string $type
      */
     public function setType($type)
     {
