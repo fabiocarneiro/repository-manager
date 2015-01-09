@@ -8,6 +8,7 @@ use Doctrine\Common\Persistence\Mapping\Driver\PHPDriver;
 use ZFBrasil\RepositoryManager\DBAL\Types\RepositoryPath;
 use ZFBrasil\RepositoryManager\DBAL\Types\RepositoryType;
 use ZFBrasil\RepositoryManager\Model;
+use ZFBrasil\RepositoryManager\Service\Factory\RepositoryManagerFactory;
 use ZFBrasil\RepositoryManager;
 
 return [
@@ -42,4 +43,9 @@ return [
             ],
         ],
     ],
+    'service_manager' => [
+        'factories' => [
+            RepositoryManager::class => RepositoryManagerFactory::class
+        ]
+    ]
 ];
