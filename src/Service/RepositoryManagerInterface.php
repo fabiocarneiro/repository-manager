@@ -2,7 +2,7 @@
 
 namespace ZFBrasil\RepositoryManager\Service;
 
-use ZFBrasil\RepositoryManager\Model\Repository;
+use ZFBrasil\RepositoryManager\DTO\Repository;
 use ZFBrasil\RepositoryManager\Model\SelectableRepository;
 
 /**

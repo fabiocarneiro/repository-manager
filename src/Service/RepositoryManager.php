@@ -4,9 +4,8 @@ namespace ZFBrasil\RepositoryManager\Service;
 
 use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\Common\Persistence\ObjectRepository;
-use ZFBrasil\RepositoryManager\Model\Repository;
+use ZFBrasil\RepositoryManager\DTO\Repository;
 use ZFBrasil\RepositoryManager\Model\SelectableRepository;
-use ZFBrasil\RepositoryManager\VO\Repository as RepositoryVO;
 
 /**
  * @author  Fábio Carneiro <fahecs@gmail.com>

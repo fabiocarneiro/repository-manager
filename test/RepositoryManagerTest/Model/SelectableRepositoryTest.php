@@ -34,4 +34,3 @@ class SelectableRepositoryTest extends TestCase
         $this->assertNull($repository->getId());
     }
 }
- 
