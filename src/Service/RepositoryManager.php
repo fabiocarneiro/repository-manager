@@ -24,6 +24,10 @@ class RepositoryManager implements RepositoryManagerInterface
      */
     private $objectRepository;
 
+    /**
+     * @param ObjectManager    $objectManager
+     * @param ObjectRepository $objectRepository
+     */
     public function __construct(
         ObjectManager $objectManager,
         ObjectRepository $objectRepository
