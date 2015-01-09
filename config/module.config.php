@@ -8,12 +8,14 @@ use Doctrine\Common\Persistence\Mapping\Driver\PHPDriver;
 use ZFBrasil\RepositoryManager\DBAL\Types\RepositoryPath;
 use ZFBrasil\RepositoryManager\DBAL\Types\RepositoryType;
 use ZFBrasil\RepositoryManager\Model;
-use ZFBrasil\RepositoryManager;
+use ZFBrasil\RepositoryManager\Service\Factory\RepositoryManagerFactory;
+use ZFBrasil\RepositoryManager\Service\RepositoryManager;
+use ZFBrasil\RepositoryManager as Module;
 
 return [
     'doctrine' => [
         'driver' => [
-            RepositoryManager::class => [
+            Module::class => [
                 'class' => PHPDriver::class,
                 'paths' => [
                     __DIR__ . '/../mapping'
@@ -21,7 +23,7 @@ return [
             ],
             'orm_default' => [
                 'drivers' => [
-                    Model::class => RepositoryManager::class
+                    Model::class => Module::class
                 ],
             ],
         ],
@@ -42,4 +44,9 @@ return [
             ],
         ],
     ],
+    'service_manager' => [
+        'factories' => [
+            RepositoryManager::class => RepositoryManagerFactory::class
+        ]
+    ]
 ];
