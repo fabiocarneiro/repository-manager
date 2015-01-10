@@ -44,7 +44,8 @@ class RepositoryPathTest extends TestCase
 
         $this->assertInstanceOf(
             Path::class,
-            $repositoryPath->convertToPHPValue('http://www.example.com',
+            $repositoryPath->convertToPHPValue(
+                'http://www.example.com',
                 $this->getMockForAbstractClass(AbstractPlatform::class)
             )
         );
@@ -91,7 +92,8 @@ class RepositoryPathTest extends TestCase
         $repositoryPath = RepositoryPath::getType('repository_path');
 
         $this->setExpectedException(ConversionException::class);
-        $repositoryPath->convertToPHPValue('invalid value',
+        $repositoryPath->convertToPHPValue(
+            'invalid value',
             $this->getMockForAbstractClass(AbstractPlatform::class)
         );
     }
