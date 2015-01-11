@@ -7,6 +7,7 @@ use Assert\Assertion;
 /**
  * @author  Fábio Carneiro <fahecs@gmail.com>
  * @license MIT
+ * @site http://www.google.com
  */
 class Path
 {

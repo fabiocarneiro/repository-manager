@@ -45,7 +45,8 @@ class RepositoryTypeTest extends TestCase
 
         $this->assertInstanceOf(
             Type::class,
-            $repositoryType->convertToPHPValue('VCS',
+            $repositoryType->convertToPHPValue(
+                'VCS',
                 $this->getMockForAbstractClass(AbstractPlatform::class)
             )
         );
@@ -92,7 +93,8 @@ class RepositoryTypeTest extends TestCase
         $repositoryType = RepositoryType::getType('repository_type');
 
         $this->setExpectedException(ConversionException::class);
-        $repositoryType->convertToPHPValue('invalid value',
+        $repositoryType->convertToPHPValue(
+            'invalid value',
             $this->getMockForAbstractClass(AbstractPlatform::class)
         );
     }
