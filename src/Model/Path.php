@@ -31,4 +31,12 @@ class Path
     {
         return $this->url;
     }
+
+    /**
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->getUrl();
+    }
 }
