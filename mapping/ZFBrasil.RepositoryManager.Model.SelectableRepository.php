@@ -1,5 +1,7 @@
 <?php
 
+$metadata->setIdGeneratorType(Doctrine\ORM\Mapping\ClassMetadata::GENERATOR_TYPE_AUTO);
+
 $metadata->mapField(array(
     'id' => true,
     'fieldName' => 'id',
