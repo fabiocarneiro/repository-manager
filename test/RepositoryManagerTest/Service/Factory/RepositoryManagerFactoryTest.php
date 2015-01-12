@@ -4,6 +4,7 @@ namespace ZFBrasil\RepositoryManagerTest\Service\Factory;
 
 use Doctrine\Common\Persistence\ObjectRepository;
 use Doctrine\Common\Persistence\ObjectManager;
+use Doctrine\ORM\EntityManager;
 use PHPUnit_Framework_TestCase as TestCase;
 use Zend\ServiceManager\ServiceLocatorInterface;
 use ZFBrasil\RepositoryManager\Model\SelectableRepository;
@@ -27,7 +28,7 @@ class RepositoryManagerFactoryTest extends TestCase
         $serviceLocator
             ->expects($this->once())
             ->method('get')
-            ->with(ObjectManager::class)
+            ->with(EntityManager::class)
             ->willReturn($objectManager);
 
         $factory           = new RepositoryManagerFactory();
