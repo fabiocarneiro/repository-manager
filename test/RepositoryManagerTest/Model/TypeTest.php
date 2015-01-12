@@ -18,5 +18,6 @@ class TypeTest extends TestCase
     {
         $type = new Type('VCS');
         $this->assertSame('VCS', $type->getName());
+        $this->assertSame('VCS', (string) $type);
     }
 }

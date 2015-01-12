@@ -18,5 +18,6 @@ class PathTest extends TestCase
     {
         $path = new Path('http://example.com');
         $this->assertSame('http://example.com', $path->getUrl());
+        $this->assertSame('http://example.com', (string) $path);
     }
 }
